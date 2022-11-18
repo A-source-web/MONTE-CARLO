@@ -1,0 +1,18 @@
+
+Azim Mohamed P
+201ME211
+CS252 Assignment
+Question 4.24
+
+int i is the global variable which is used for incrementing in the for loop
+int n stores the total number of points that the user needs to calclate the value of pi
+int totalPts stores the number of points in the circle.
+In the main function, srand() creates a seed for a random number to be generated.
+pthread_t thread, creates a variable to store unsigned int value of thread identifier.
+Input n is taken using a while loop until the input n is a positive input.
+pthread_create(&thread, NULL,count, NULL);//creates a thread. The first parameter thread is passed so that the date of the thread can be stored in it. NULL in second attribute to set attributes of new thread created to default since no specifications are to be provided.Count() function indicates the starting point of the child thread.Fourth attribute null because no integer parameter was provided on the command line
+ pthread_join(thread, NULL);//waits for the child thread to finish executing and update data.The parent thread waits. The second attribute is null to indicate that the parent thread doesnt expect any return value from the child thread.
+ We define a function count(). It returns a void pointer, it is a way to signal pthread_join that child process has terminated.
+It uses the rand() function to generate random coordinates. We devide it by RAND_MAX. This produces value between 0 and 1.
+If the distnace of point from the origin < 1. totalpts increments.
+ 
